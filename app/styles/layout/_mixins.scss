@@ -1,0 +1,10 @@
+@mixin vertical-align {
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+}
+
+@mixin clear-vertical-align {
+  @include transform(none);
+  top: auto;
+}

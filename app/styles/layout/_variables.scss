@@ -1,0 +1,47 @@
+// grid
+$column: 20px;
+$gutter: 12px;
+$grid-columns: 12;
+$max-width: 1130px;
+
+// font stacks
+$gothamBook: "GothamBook", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$gothamLight: "GothamLight", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$gothamThin: "GothamThin", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$helvetica: "Helvetica Neue", "Helvetica","Arial", sans-serif;
+$times: "Times", "Times New Roman", serif;
+$sanchez: "Sanchez", "Times New Roman", serif;
+$circularAirBold: "Circular-Air-Bold", "Helvetica", "Arial", sans-serif;
+$circularAirBook: "Circular-Air-Book", "Helvetica", "Arial", sans-serif;
+$circularAirLight: "Circular-Air-Light", "Helvetica", "Arial", sans-serif;
+
+// Breakpoints (including grid columns)
+$desktop-plus: new-breakpoint(min-width 1280px 12);
+$desktop: new-breakpoint(min-width 960px 12);
+$tablet: new-breakpoint(min-width 768px 12);
+$mobile-plus: new-breakpoint(min-width 540px 12);
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$color-heather-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease-in-out;
+
+// margins
+$main-left-margin: 5%;
+
+//colors
+$black: #000;
+$white: #fff;
+$dim-gray: #6f6f6f

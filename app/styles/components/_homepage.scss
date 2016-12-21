@@ -1,0 +1,25 @@
+.homepage {
+
+  article {
+
+    .main-image {
+      margin-bottom: rem(18);
+    }
+
+    p {
+      @include layout;
+      text-align: center;
+      font-size: rem(11);
+      font-size: rem(15);
+    }
+
+    a {
+      font-family: Circular-Air-Bold;
+      font-size: rem(12);
+    }
+
+  }
+
+
+
+}//.homepage

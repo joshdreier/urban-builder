@@ -1,0 +1,93 @@
+body {
+  font-family: 'Circular-Air-Book', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #fff;
+  color: #3b3b3b;
+  font-feature-settings: 'kern', 'liga', 'pnum';
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+
+}
+
+p {
+  margin: 0 0 $small-spacing;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #9d9d9d;
+  transition: color $base-duration $base-timing;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+strong {
+  font-weight: bold;
+}
+
+img,
+picture {
+  margin: 0;
+  width: 100%;
+  border:none;
+  display:block;
+}
+
+article {
+  font-size: rem(16);
+  line-height: rem(20);
+
+  p {
+    font-size: rem(16);
+    line-height: rem(20);
+    margin-bottom: rem(20);
+  }
+
+  h2 {
+    font-size: rem(20);
+    line-height: rem(24);
+    font-family: $sanchez;
+    margin-bottom: rem(20);
+    text-align: center;
+    text-transform: uppercase;
+    color: #757575;
+
+    @include media($tablet) {
+      font-size: rem(22);
+      line-height: rem(26);
+    }
+
+  }
+
+  h3 {
+    font-size: rem(16);
+    line-height: rem(20);
+    font-family: $circularAirBold;
+    margin-bottom: 0;
+  }
+
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.screen-reader-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+}

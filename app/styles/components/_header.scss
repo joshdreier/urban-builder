@@ -1,0 +1,26 @@
+header {
+  position: relative;
+  @include layout;
+  @include padding(rem(24) 0)
+  display: flex;
+
+  @include media($tablet) {
+    padding: rem(30) 0 rem(10);
+  }
+
+  .logo-container {
+    @include span-columns(10);
+    padding: 0;
+    margin: 0 0 0 rem(-2);
+
+    a {
+      @include size(220px 21px);
+      @include hide-text;
+      display: block;
+      background: url('/images/logo.svg') no-repeat center center;
+      background-size: 220px auto;
+    }
+
+  }//.logo-container
+
+}// header

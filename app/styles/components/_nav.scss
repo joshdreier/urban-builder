@@ -1,0 +1,61 @@
+.hamburger-icon {
+  @include position(absolute, 33px 5px null null);
+  z-index: 12;
+  @include size(26px);
+  display: block;
+  cursor: pointer;
+  // hide-text() mixin doesn't work here
+  text-indent: -9999em;
+
+  @include media($tablet) {
+    left: 30px;
+  }
+
+  @include media($tablet) {
+    display: none;
+  }
+
+  a,
+  a::before,
+  a::after {
+    @include transition(all $base-duration $base-timing);
+    @include size(30px 2px);
+    cursor: pointer;
+    background: $dim-gray;
+    position: absolute;
+    display: block;
+    content: '';
+  }
+
+  a:before {
+    top: -9px;
+
+  }
+
+  a:after {
+    bottom: -9px;
+
+  }
+
+  &.active {
+
+    a {
+      background-color: transparent;
+
+      &:before {
+        @include transform (rotate(45deg));
+        top: 0;
+        width: 30px;
+      }
+
+      &:after {
+        @include transform (rotate(-45deg));
+        top: 0;
+        width: 30px;
+      }
+
+    }
+
+  }
+
+}

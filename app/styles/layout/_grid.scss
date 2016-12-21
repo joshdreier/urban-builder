@@ -1,0 +1,17 @@
+$grid-columns: 12 !global;
+$column: modular-scale(3, 1em, $major-eleventh);
+$gutter: modular-scale(1, 1em, $major-eleventh);
+
+@mixin layout {
+  @include outer-container(1280px);
+  width: calc(100% - 40px);
+
+  @include media($mobile-plus) {
+    width: calc(100% - 60px);
+  }
+
+  @include media($desktop) {
+    width: percentage(1140/1280);
+    min-width: 900px;
+  }
+}
