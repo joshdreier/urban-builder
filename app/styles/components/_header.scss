@@ -1,11 +1,11 @@
 header {
   position: relative;
   @include layout;
-  @include padding(rem(24) 0)
+  @include padding(rem(24) 0);
   display: flex;
 
-  @include media($tablet) {
-    padding: rem(30) 0 rem(10);
+  @include media($desktop) {
+    @include padding(rem(40) 0);
   }
 
   .logo-container {
@@ -19,8 +19,39 @@ header {
       display: block;
       background: url('/images/logo.svg') no-repeat center center;
       background-size: 220px auto;
+
+      @include media($desktop) {
+        @include size(310px 32px);
+        background-size: 310px auto;
+      }
+
     }
 
   }//.logo-container
+
+  .main-nav {
+    @include span-columns(20);
+    @include omega;
+    float: right;
+    text-align: right;
+    text-transform: uppercase;
+    display: none;
+
+    @include media($desktop) {
+      display: block;
+    }
+
+    a {
+      display: inline-block;
+      margin-left: rem(50);
+      font-size: rem(20);
+
+      &:hover {
+        text-decoration: none;
+        color: #3b3b3b;
+      }
+    }
+
+  }
 
 }// header

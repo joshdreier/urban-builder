@@ -8,3 +8,7 @@
   @include transform(none);
   top: auto;
 }
+
+@mixin nowrap {
+  white-space: nowrap;
+}

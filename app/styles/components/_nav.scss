@@ -4,14 +4,9 @@
   @include size(26px);
   display: block;
   cursor: pointer;
-  // hide-text() mixin doesn't work here
   text-indent: -9999em;
 
-  @include media($tablet) {
-    left: 30px;
-  }
-
-  @include media($tablet) {
+  @include media($desktop) {
     display: none;
   }
 
