@@ -51,6 +51,11 @@
 
     .main-text {
       @include layout;
+      @include padding(rem(10) null);
+
+      @include media($tablet) {
+        @include padding(rem(20) null);
+      }
 
       @include media($desktop) {
         @include padding(rem(40) null);
@@ -70,7 +75,6 @@
         @include media($desktop) {
           font-size: rem(28);
           line-height: rem(40);
-
         }
 
       }
@@ -80,6 +84,17 @@
       a {
         font-family: Circular-Air-Bold;
         font-size: rem(12);
+
+        @include media($tablet) {
+          font-size: rem(14);
+          line-height: rem(24);
+        }
+
+        @include media($desktop) {
+          font-size: rem(22);
+          line-height: rem(40);
+        }
+
       }
 
     }
