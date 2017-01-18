@@ -1,10 +1,67 @@
+.main-nav {
+  @include position(fixed, 0 0 0 0);
+  transition: opacity $base-duration $base-timing;
+  background-color: rgba(0, 0, 0, .88);
+  text-align: center;
+  z-index: 100;
+  padding-top: rem(80);
+  visibility: hidden;
+  opacity: 0;
+
+  @include media($desktop) {
+    display: block;
+    position: relative;
+    background-color: transparent;
+    @include span-columns(20);
+    @include omega;
+    float: right;
+    text-align: right;
+    padding-top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  a {
+    display: block;
+    font-size: rem(40);
+    text-transform: uppercase;
+    margin-bottom: rem(20);
+    text-decoration: none;
+
+    @include media($desktop) {
+      display: inline-block;
+      margin-left: rem(50);
+      margin-bottom: 0;
+      font-size: rem(20);
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+
+      @include media($desktop) {
+        color: #3b3b3b;
+      }
+
+    }
+
+  }
+
+}
+
 .hamburger-icon {
-  @include position(absolute, 33px 5px null null);
-  z-index: 12;
-  @include size(26px);
+  @include position(absolute, 33px -11px null null);
+  z-index: 101;
+  @include size(44px);
   display: block;
   cursor: pointer;
   text-indent: -9999em;
+  -webkit-tap-highlight-color: transparent;
 
   @include media($desktop) {
     display: none;

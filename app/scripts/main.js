@@ -1,4 +1,4 @@
-var SFPS = {};
+var UB = {};
 
 $(function() {
 
@@ -21,28 +21,24 @@ $(function() {
 });
 
 
-SFPS.modal = (function($){
+UB.modal = (function($){
 
   var modalOverlay,
-      modalCloseBtn,
-      modalContent,
-      btnMobileMenu;
+      navButton;
 
   function init(){
-    modalOverlay = $('.modal-overlay');
-    modalCloseBtn = modalOverlay.find('.icon-close-white');
-    modalContent = $('.modal-content');
-    btnMobileMenu = $('.hamburger');
-    btnMobileMenu.on('click',  mobileMenuHandler);
-    modalCloseBtn.on('click', modalClose);
+    modalOverlay = $('.main-nav');
+    navButton = $('.hamburger-icon');
+    navButton.on('click',  mobileMenuHandler);
   }
 
   // show overlay
-  function modalOpen(e) {
+  function modalOpen() {
     modalOverlay.addClass('show-modal');
     $('body').css('overflow-x', 'hidden');
     $('html').css('overflow', 'hidden');
     $('#wrapper').addClass('fixed');
+    modalOverlay.addClass('active');
   }
 
   //hide overlay and modal content
@@ -51,11 +47,22 @@ SFPS.modal = (function($){
     $('body').css('overflow-x', 'auto');
     $('html').css('overflow', 'auto');
     $('#wrapper').removeClass('fixed');
+    modalOverlay.removeClass('active');
   }
 
   function mobileMenuHandler(e){
     e.preventDefault();
-    modalOpen();
+
+    if (! $(this).is('.active') ) {
+      modalOpen(this);
+      $(this).addClass('active');
+    }
+
+    else {
+      modalClose(this);
+      $(this).removeClass('active');
+    }
+
   }
 
   init();

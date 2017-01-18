@@ -1,8 +1,8 @@
 header {
-  position: relative;
   @include layout;
   @include padding(rem(24) 0);
   display: flex;
+  position: relative;
 
   @include media($desktop) {
     @include padding(rem(40) 0);
@@ -28,30 +28,5 @@ header {
     }
 
   }//.logo-container
-
-  .main-nav {
-    @include span-columns(20);
-    @include omega;
-    float: right;
-    text-align: right;
-    text-transform: uppercase;
-    display: none;
-
-    @include media($desktop) {
-      display: block;
-    }
-
-    a {
-      display: inline-block;
-      margin-left: rem(50);
-      font-size: rem(20);
-
-      &:hover {
-        text-decoration: none;
-        color: #3b3b3b;
-      }
-    }
-
-  }
 
 }// header
