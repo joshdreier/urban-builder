@@ -1,0 +1,177 @@
+.projects {
+  position: relative;
+
+  h1 {
+    @include position(absolute, 10px -3px 0 0);
+    pointer-events: none;
+    z-index: 2;
+    color: #fff;
+    font-size: 50px;
+    font-size: 14vw;
+    line-height: 50px;
+    line-height: 14vw;
+    letter-spacing: -2px;
+    text-align: right;
+    text-shadow: 1px 0 1px rgba(0,0,0,.6);
+    margin: 0;
+
+    @include media($desktop) {
+      //.screen-reader-only
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      margin: -1px;
+      padding: 0;
+    }
+
+  }
+
+  li {
+    @include clearfix;
+    list-style: none;
+
+    &:nth-child(odd) {
+      background-color: rgba(187, 187, 187, .21);
+    }
+
+    .property-container {
+      padding-bottom: rem(40);
+
+      @include media($tablet) {
+        padding-bottom: rem(50);
+      }
+
+      @include media($desktop) {
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+      }
+
+    }
+
+    .swiper-container {
+
+      @include media($desktop) {
+        @include span-columns(7);
+      }
+
+      img {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+
+    }
+
+    .swiper-slide {
+      position: relative;
+    }
+
+    .swiper-pagination {
+      @include position(absolute, null 0 10px 0);
+
+      @include media($tablet) {
+        bottom: 15px;
+      }
+
+    }
+
+    .swiper-container-horizontal {
+
+      .swiper-pagination-bullets {
+
+        .swiper-pagination-bullet {
+          @include size(10px);
+          margin: 0 10px;
+          background-color: #FFF;
+          transition: opacity .15s;
+          display: inline-block;
+          opacity: .5;
+
+          @include media($tablet) {
+            @include size(12px);
+            margin: 0 12px;
+          }
+
+          &.swiper-pagination-bullet-active {
+            opacity: 1;
+          }
+
+        }
+
+      }
+
+    }
+
+    .text-container {
+      @include layout;
+      padding-top: 20px;
+
+      @include media($tablet) {
+        padding-top: 30px;
+      }
+
+      @include media($desktop) {
+        @include remove-layout;
+        @include span-columns(5);
+        @include omega;
+        padding: 0 4% 0 10px;
+      }
+
+      @include media($desktop-plus) {
+        padding-right: 12%;
+      }
+
+      h2 {
+        margin-bottom: rem(12);
+        margin-top: 0;
+        font-size: rem(24);
+        line-height: rem(28);
+
+        @include media($tablet) {
+          font-size: rem(30);
+          line-height: rem(36);
+          margin-bottom: rem(16);
+        }
+
+        @include media($desktop) {
+          font-size: rem(28);
+          line-height: rem(32);
+        }
+
+        @include media($desktop-plus) {
+          font-size: rem(30);
+          line-height: rem(36);
+        }
+
+      }
+
+      p {
+        font-size: rem(13);
+        line-height: rem(21);
+
+        @include media($tablet) {
+          font-size: rem(18);
+          line-height: rem(28);
+        }
+
+        @include media($desktop) {
+          font-size: rem(16);
+          line-height: rem(24);
+        }
+
+        @include media($desktop-plus) {
+          font-size: rem(18);
+          line-height: rem(28);
+        }
+
+      }
+
+    }
+
+  }
+
+}

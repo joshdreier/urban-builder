@@ -15,3 +15,9 @@ $gutter: modular-scale(1, 1em, $major-eleventh);
     min-width: 900px;
   }
 }
+
+@mixin remove-layout {
+  width: auto;
+  min-width: 0;
+}
+

@@ -2,24 +2,27 @@ var UB = {};
 
 $(function() {
 
-  // Swiper
-  var swiperMain = new Swiper('.swiper-container', {
-    spaceBetween: 10,
-    slidesPerView: 1,
-    slideToClickedSlide: true,
-    grabCursor: true,
-    loop: true,
-    autoplay: 6000,
-    speed: 1000,
-    effect: 'fade',
-    fade: {
-      crossFade: true
-    }
+  // projects swiper
+  $('.swiper-container').each(function(){
+    new Swiper($(this), {
+      spaceBetween: 3,
+      slidesPerView: 1,
+      grabCursor: true,
+
+      speed: 1000,
+      pagination: $(this).find('.swiper-pagination'),
+      paginationClickable: $(this).find('.swiper-pagination')
+    });
   });
 
+  //autoplay first
+  var mySwiper = $('.swiper-container')[0].swiper;
+  mySwiper.params.autoplay = 5000;
+  mySwiper.startAutoplay();
 
 });
 
+// mobile nav
 
 UB.modal = (function($){
 

@@ -50,18 +50,28 @@
 
     }
 
+    &.active {
+
+      @include media($desktop) {
+        text-decoration: underline;
+        color: #3b3b3b;
+      }
+
+    }
+
   }
 
 }
 
 .hamburger-icon {
-  @include position(absolute, 33px -11px null null);
+  @include position(absolute, 13px -11px null null);
   z-index: 101;
   @include size(44px);
   display: block;
   cursor: pointer;
   text-indent: -9999em;
   -webkit-tap-highlight-color: transparent;
+  padding-top: 20px;
 
   @include media($desktop) {
     display: none;
