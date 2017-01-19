@@ -8,7 +8,7 @@ $(function() {
       spaceBetween: 3,
       slidesPerView: 1,
       grabCursor: true,
-
+      loop: true,
       speed: 1000,
       pagination: $(this).find('.swiper-pagination'),
       paginationClickable: $(this).find('.swiper-pagination')

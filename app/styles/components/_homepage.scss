@@ -62,7 +62,6 @@
       }
 
       p {
-        @include layout;
         text-align: center;
         font-size: rem(14);
         line-height: rem(18);
@@ -70,6 +69,7 @@
         @include media($tablet) {
           font-size: rem(18);
           line-height: rem(24);
+          padding: 0 10%;
         }
 
         @include media($desktop) {
