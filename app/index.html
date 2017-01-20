@@ -35,7 +35,7 @@
     <![endif]-->
 
 
-    <div id="wrapper" class="homepage">
+    <div id="wrapper">
 
       <header>
         <h1 class="logo-container"><a id="logo" href="/">The Urban Builder</a></h1>
@@ -51,12 +51,22 @@
       </header>
 
 
-      <main id="content">
+      <main id="content" class="homepage">
 
         <article>
 
           <div class="main-image">
-            <div><img src="/images/home-main.jpg" alt="48th Avenue Kitchen"></div>
+
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide" style="background-image: url('/images/home-main.jpg');"></div>
+
+                <div class="swiper-slide" style="background-image: url('/images/home-main2.jpg');"></div>
+
+              </div>
+            </div>
+
             <div class="tout">
               <p>“Kevin, the owner, is practical, focused on customer service, and communicates extremely well. When unexpected things were found in the course of the project, he was always focused on finding a practical solution, not on figuring out a way to increase <span>the budget.”</span></p>
             </div>
@@ -67,6 +77,8 @@
 
             <p>Since its inception in 2006, The Urban Builder has been dedicated to providing the highest quality craftsmanship combined with a professional and friendly approach to client relationships. <a href="company.html">MORE ></a></p>
           </div>
+
+          <div class="company-image" style="background-image: url('/images/company.jpg');"></div>
 
       </main>
 

@@ -2,23 +2,49 @@ var UB = {};
 
 $(function() {
 
-  // projects swiper
-  $('.swiper-container').each(function(){
-    new Swiper($(this), {
-      spaceBetween: 3,
-      slidesPerView: 1,
-      grabCursor: true,
-      loop: true,
-      speed: 1000,
-      pagination: $(this).find('.swiper-pagination'),
-      paginationClickable: $(this).find('.swiper-pagination')
-    });
-  });
 
-  //autoplay first
-  var mySwiper = $('.swiper-container')[0].swiper;
-  mySwiper.params.autoplay = 5000;
-  mySwiper.startAutoplay();
+  // Hero Slideshow
+  if ($('.homepage').length) {
+    var swiperHero = new Swiper('.homepage .swiper-container', {
+      autoplay: 4000,
+      speed: 1000,
+      //onlyExternal: true,
+      loop: true,
+      spaceBetween: 0,
+      slidesPerView: 1,
+      slideToClickedSlide: true,
+      effect: 'fade',
+      fade: {
+        crossFade: true
+      },
+      preloadImages: false
+    });
+
+  }
+
+
+  // projects swiper
+
+  if ($('.projects').length) {
+
+    $('.swiper-container').each(function(){
+      new Swiper($(this), {
+        spaceBetween: 3,
+        slidesPerView: 1,
+        grabCursor: true,
+        loop: true,
+        speed: 1000,
+        pagination: $(this).find('.swiper-pagination'),
+        paginationClickable: $(this).find('.swiper-pagination')
+      });
+    });
+
+    //autoplay first
+    var mySwiper = $('.swiper-container')[0].swiper;
+    mySwiper.params.autoplay = 5000;
+    mySwiper.startAutoplay();
+
+  }
 
 });
 

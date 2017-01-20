@@ -1,6 +1,7 @@
 .projects {
   position: relative;
   overflow: hidden;
+  margin-bottom: rem(50);
 
   li {
     @include clearfix;

@@ -21,3 +21,6 @@ $gutter: modular-scale(1, 1em, $major-eleventh);
   min-width: 0;
 }
 
+main {
+  @include clearfix;
+}

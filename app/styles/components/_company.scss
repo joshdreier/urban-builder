@@ -1,0 +1,51 @@
+.company {
+
+  article {
+
+    .main-image {
+      margin-bottom: 0;
+
+      @include media($tablet) {
+        @include span-columns(6);
+        width: 50%;
+        margin: rem(30) 0 0;
+      }
+
+    }
+
+    .main-text {
+      padding: 0;
+      text-align: left;
+      margin-top: rem(20);
+
+      @include media($tablet) {
+        @include remove-layout;
+        @include span-columns(6);
+        width: 50%;
+        @include omega;
+        margin-top: rem(26);
+        margin-bottom: rem(30);
+      }
+
+      p {
+        text-align: left;
+        font-size: rem(14);
+        line-height: rem(22);
+
+        @include media($tablet) {
+          font-size: rem(16);
+          line-height: rem(24);
+        }
+
+        @include media($desktop) {
+          font-size: rem(20);
+          line-height: rem(30);
+        }
+      }
+
+    }
+
+  }
+
+
+}

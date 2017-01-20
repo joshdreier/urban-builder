@@ -7,8 +7,22 @@
       margin-bottom: rem(18);
       position: relative;
 
+      .swiper-slide {
+        position: relative;
+        background-position: center center;
+        background-size: cover;
+        max-height: 680px;
+
+          &::before {
+            display: block;
+            padding-bottom: 640 / 1028 * 100%;
+            content: '';
+          }
+      }
+
       .tout {
         @include position(relative, null 0 0 0);
+        z-index: 1;
         background-color: rgba(0, 0, 0, .5);
         color: $white;
         text-align: center;
@@ -26,17 +40,17 @@
 
         p {
           margin-bottom: 0;
-          font-size: rem(12);
-          line-height: rem(16);
+          font-size: rem(14);
+          line-height: rem(20);
 
           @include media($tablet) {
             font-size: rem(16);
-            line-height: rem(20);
+            line-height: rem(22);
           }
 
           @include media($desktop) {
             font-size: rem(18);
-            line-height: rem(24);
+            line-height: rem(26);
           }
 
           span {
@@ -47,6 +61,19 @@
 
       }
 
+    }
+
+    .company-image {
+      position: relative;
+      background-position: center center;
+      background-size: cover;
+      max-height: 680px;
+
+        &::before {
+          display: block;
+          padding-bottom: 640 / 1028 * 100%;
+          content: '';
+        }
     }
 
     .main-text {
