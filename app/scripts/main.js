@@ -35,7 +35,9 @@ $(function() {
         loop: true,
         speed: 1000,
         pagination: $(this).find('.swiper-pagination'),
-        paginationClickable: $(this).find('.swiper-pagination')
+        paginationClickable: $(this).find('.swiper-pagination'),
+        preventClicks: false,
+        onClick: function(swiper,event){swiper.slideNext();}
       });
     });
 

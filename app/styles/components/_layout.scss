@@ -1,0 +1,127 @@
+article {
+
+  .main-image {
+    margin-bottom: rem(18);
+    position: relative;
+
+    .swiper-slide {
+      position: relative;
+      background-position: center center;
+      background-size: cover;
+      max-height: 680px;
+
+        &::before {
+          display: block;
+          padding-bottom: 640 / 1028 * 100%;
+          content: '';
+        }
+    }
+
+    .tout {
+      @include position(relative, null 0 0 0);
+      z-index: 1;
+      background-color: rgba(0, 0, 0, .5);
+      color: $white;
+      text-align: center;
+      padding: rem(20);
+
+      @include media($tablet) {
+        padding: rem(30);
+      }
+
+      @include media($desktop) {
+        @include position(absolute, 70px 0 auto auto);
+        width: 42%;
+        padding: rem(40);
+      }
+
+      p {
+        margin-bottom: 0;
+        font-size: rem(14);
+        line-height: rem(20);
+
+        @include media($tablet) {
+          font-size: rem(16);
+          line-height: rem(22);
+        }
+
+        @include media($desktop) {
+          font-size: rem(18);
+          line-height: rem(26);
+        }
+
+        span {
+          @include nowrap;
+        }
+
+      }
+
+    }
+
+  }
+
+  .company-image {
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+    max-height: 680px;
+
+      &::before {
+        display: block;
+        padding-bottom: 640 / 1028 * 100%;
+        content: '';
+      }
+  }
+
+  .main-text {
+    @include layout;
+    @include padding(rem(10) null);
+
+    @include media($tablet) {
+      @include padding(rem(20) null);
+    }
+
+    @include media($desktop) {
+      @include padding(rem(40) null);
+    }
+
+    p {
+      text-align: center;
+      font-size: rem(14);
+      line-height: rem(18);
+
+      @include media($tablet) {
+        font-size: rem(18);
+        line-height: rem(24);
+        padding: 0 10%;
+      }
+
+      @include media($desktop) {
+        font-size: rem(28);
+        line-height: rem(40);
+      }
+
+    }
+
+
+
+    a {
+      font-family: Circular-Air-Bold;
+      font-size: rem(12);
+
+      @include media($tablet) {
+        font-size: rem(14);
+        line-height: rem(24);
+      }
+
+      @include media($desktop) {
+        font-size: rem(22);
+        line-height: rem(40);
+      }
+
+    }
+
+  }
+
+
+}
