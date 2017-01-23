@@ -41,20 +41,19 @@ picture {
 
 main h1 {
   //@include position(absolute, 10px -3px 0 0);
-  pointer-events: none;
-  background: #ddd;
-  z-index: 2;
-  color: #fff;
-  font-size: 24px;
-  font-size: 7vw;
-  line-height: 50px;
-  line-height: 12vw;
-  letter-spacing: -1px;
-  text-align: center;
-  margin: 0;
-  text-shadow: 1px 0 1px rgba(0,0,0,.05);
+  // pointer-events: none;
+  // background: #ddd;
+  // z-index: 2;
+  // color: #fff;
+  // font-size: 24px;
+  // font-size: 7vw;
+  // line-height: 50px;
+  // line-height: 12vw;
+  // letter-spacing: -1px;
+  // text-align: center;
+  // margin: 0;
+  // text-shadow: 1px 0 1px rgba(0,0,0,.05);
 
-  @include media($desktop) {
     //.screen-reader-only
     border: 0;
     clip: rect(0, 0, 0, 0);
@@ -64,7 +63,6 @@ main h1 {
     overflow: hidden;
     margin: -1px;
     padding: 0;
-  }
 
 }
 
