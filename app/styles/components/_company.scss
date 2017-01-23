@@ -6,9 +6,8 @@
     .main-image {
       margin-bottom: 0;
 
-      @include media($tablet) {
-        @include span-columns(6);
-        width: 50%;
+      @include media($desktop) {
+        @include span-columns(6, block-collapse);
         margin: rem(30) 0 0;
       }
 
@@ -19,10 +18,9 @@
       text-align: left;
       margin-top: rem(20);
 
-      @include media($tablet) {
+      @include media($desktop) {
         @include remove-layout;
-        @include span-columns(6);
-        width: 50%;
+        @include span-columns(6, block-collapse);
         @include omega;
         margin-top: rem(26);
         margin-bottom: rem(30);
@@ -71,3 +69,70 @@
   }
 
 }
+
+
+
+.contact {
+
+  article {
+
+    .main-text {
+      padding: 0;
+      text-align: center;
+      margin-top: rem(40);
+      margin-bottom: 40px;
+
+      @include media($desktop) {
+        @include fill-parent;
+        max-width: 100%;
+        margin-top: rem(80);
+        margin-bottom: rem(100);
+      }
+
+
+      p,
+      a {
+        text-align: center;
+        font-size: rem(14);
+        line-height: rem(22);
+
+        @include media($tablet) {
+          font-size: rem(16);
+          line-height: rem(24);
+        }
+
+        @include media($desktop) {
+          font-size: rem(20);
+          line-height: rem(30);
+          margin-bottom: rem(30);
+        }
+
+      }
+
+      a {
+        font-weight: normal;
+      }
+
+      address {
+        font-style: normal;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        color: #000;
+        font-size: rem(14);
+
+        @include media($tablet) {
+          padding: 0 10%;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
