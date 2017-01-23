@@ -42,9 +42,9 @@ $(function() {
     });
 
     //autoplay first
-    var mySwiper = $('.swiper-container')[0].swiper;
-    mySwiper.params.autoplay = 5000;
-    mySwiper.startAutoplay();
+    //var mySwiper = $('.swiper-container')[0].swiper;
+    //mySwiper.params.autoplay = 5000;
+    //mySwiper.startAutoplay();
 
   }
 
