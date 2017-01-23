@@ -7,7 +7,7 @@
       margin-bottom: 0;
 
       @include media($desktop) {
-        @include span-columns(6, block-collapse);
+        @include span-columns(8, block-collapse);
         margin: rem(30) 0 0;
       }
 
@@ -20,7 +20,7 @@
 
       @include media($desktop) {
         @include remove-layout;
-        @include span-columns(6, block-collapse);
+        @include span-columns(4, block-collapse);
         @include omega;
         margin-top: rem(26);
         margin-bottom: rem(30);
