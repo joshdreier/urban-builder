@@ -71,16 +71,16 @@ footer {
         background-size: contain;
 
         &.houzz1 {
-          background-image: url('/images/badge-houzz-featured.png');
+          background-image: url('../images/badge-houzz-featured.png');
         }
 
         &.houzz2 {
-          background-image: url('/images/badge-houzz-bestof.png');
+          background-image: url('../images/badge-houzz-bestof.png');
         }
 
         &.yelp {
           @include size(57px 40px);
-          background-image: url('/images/badge-yelp-5star.png');
+          background-image: url('../images/badge-yelp-5star.png');
         }
       }
 

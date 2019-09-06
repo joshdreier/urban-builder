@@ -17,7 +17,7 @@ header {
       @include size(220px 21px);
       @include hide-text;
       display: block;
-      background: url('/images/logo.svg') no-repeat center center;
+      background: url('../images/logo.svg') no-repeat center center;
       background-size: 220px auto;
 
       @include media($desktop) {
