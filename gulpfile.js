@@ -9,7 +9,6 @@ var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
 var sassLint = require('gulp-sass-lint');
 var autoprefixer = require('gulp-autoprefixer');
-var modernizr = require('gulp-modernizr');
 
 var paths = {
   scripts: [
@@ -29,25 +28,6 @@ var paths = {
     'dist/js/**/*.min.js'
   ]
 };
-
-gulp.task('modernizr', function () {
-  'use strict';
-  return gulp.src('app/js/*.js')
-    .pipe(modernizr('modernizr.min.js', {
-      options: [
-        'setClasses',
-        'addTest',
-        'testProp'
-      ],
-      tests: [
-        'pointerevents',
-        'flexbox'
-      ],
-      crawl: false
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest('dist/js/vendor'));
-});
 
 gulp.task('clean', function () {
   'use strict';
@@ -146,7 +126,7 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('build', gulp.series(['sass', 'compress', 'modernizr', 'html', 'fonts', 'images']));
+gulp.task('build', gulp.series(['sass', 'compress', 'html', 'fonts', 'images']));
 
 gulp.task('watch', gulp.series(['build'], function () {
   'use strict';
