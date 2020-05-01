@@ -30,7 +30,7 @@ article {
       }
 
       @include media($desktop) {
-        @include position(absolute, 70px 0 auto auto);
+        @include position(absolute, 70px null auto 0);
         width: 42%;
         padding: rem(40);
       }
