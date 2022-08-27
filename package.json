@@ -25,6 +25,7 @@
     "jquery": "^3.4.0",
     "merge-stream": "^1.0.1",
     "natives": "^1.1.6",
+    "node-sass": "^7.0.1",
     "pbcopy": "0.0.1"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 .main-nav {
   @include position(fixed, 0 0 0 0);
   transition: opacity $base-duration $base-timing;
-  background-color: rgba(0, 0, 0, .88);
+  background-color: rgba(255, 255, 255, .92);
   text-align: center;
   z-index: 100;
   padding-top: rem(80);
@@ -42,12 +42,7 @@
 
     &:hover {
       text-decoration: none;
-      color: #fff;
-
-      @include media($desktop) {
-        color: #3b3b3b;
-      }
-
+      color: #3b3b3b;
     }
 
     &.active {
