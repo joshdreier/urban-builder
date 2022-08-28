@@ -1,20 +1,22 @@
 .main-nav {
-  @include position(fixed, 0 0 0 0);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   transition: opacity $base-duration $base-timing;
   background-color: rgba(255, 255, 255, .92);
   text-align: center;
   z-index: 100;
-  padding-top: rem(80);
+  padding-top: 80px;
   visibility: hidden;
   opacity: 0;
 
-  @include media($desktop) {
+  @include media(desktop) {
     display: block;
     position: relative;
     background-color: transparent;
-    @include span-columns(20);
-    @include omega;
-    float: right;
+    justify-self: flex-end;
     text-align: right;
     padding-top: 0;
     visibility: visible;
@@ -28,16 +30,16 @@
 
   a {
     display: block;
-    font-size: rem(30);
+    font-size: 30px;
     text-transform: uppercase;
-    margin-bottom: rem(20);
+    margin-bottom: 20px;
     text-decoration: none;
 
-    @include media($desktop) {
+    @include media(desktop) {
       display: inline-block;
-      margin-left: rem(50);
+      margin-left: 50px;
       margin-bottom: 0;
-      font-size: rem(20);
+      font-size: 20px;
     }
 
     &:hover {
@@ -47,7 +49,7 @@
 
     &.active {
 
-      @include media($desktop) {
+      @include media(desktop) {
         text-decoration: underline;
         color: #3b3b3b;
       }
@@ -59,24 +61,28 @@
 }
 
 .hamburger-icon {
-  @include position(absolute, 13px -11px null null);
-  z-index: 101;
-  @include size(44px);
+  position: absolute;
+  right: 10px;
+  z-index: 1000;
+  justify-self: flex-end;
+  width: 44px;
+  height: 44px;
   display: block;
   cursor: pointer;
   text-indent: -9999em;
   -webkit-tap-highlight-color: transparent;
-  padding-top: 20px;
+  padding-top: 33px;
 
-  @include media($desktop) {
+  @include media(desktop) {
     display: none;
   }
 
   a,
   a::before,
   a::after {
-    @include transition(all $base-duration $base-timing);
-    @include size(30px 2px);
+    transition: all 150ms ease-in-out;
+    width: 30px;
+    height: 2px;
     cursor: pointer;
     background: $dim-gray;
     position: absolute;
@@ -100,13 +106,13 @@
       background-color: transparent;
 
       &:before {
-        @include transform (rotate(45deg));
+        transform: rotate(45deg);
         top: 0;
         width: 30px;
       }
 
       &:after {
-        @include transform (rotate(-45deg));
+        transform: rotate(-45deg);
         top: 0;
         width: 30px;
       }

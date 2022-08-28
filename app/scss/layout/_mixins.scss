@@ -12,3 +12,17 @@
 @mixin nowrap {
   white-space: nowrap;
 }
+
+
+// Media queries
+
+@mixin media($media) {
+
+  @if $media == tablet {
+    @media only screen and (min-width: 768px) { @content; }
+  }
+
+  @if $media == desktop {
+    @media only screen and (min-width: 1180px) { @content; }
+  }
+}

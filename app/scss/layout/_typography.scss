@@ -67,34 +67,34 @@ main h1 {
 }
 
 article {
-  font-size: rem(16);
-  line-height: rem(20);
+  font-size: 16px;
+  line-height: 20px;
 
   p {
-    font-size: rem(16);
-    line-height: rem(20);
-    margin-bottom: rem(20);
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
   }
 
   h2 {
-    font-size: rem(20);
-    line-height: rem(24);
+    font-size: 20px;
+    line-height: 24px;
     font-family: $sanchez;
-    margin-bottom: rem(20);
+    margin-bottom: 20px;
     text-align: center;
     text-transform: uppercase;
     color: #757575;
 
-    @include media($tablet) {
-      font-size: rem(22);
-      line-height: rem(26);
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: 26px;
     }
 
   }
 
   h3 {
-    font-size: rem(16);
-    line-height: rem(20);
+    font-size: 16px;
+    line-height: 20px;
     font-family: $circularAirBold;
     margin-bottom: 0;
   }

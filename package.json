@@ -1,7 +1,7 @@
 {
-  "name": "JoshDreier",
+  "name": "The Urban Builder",
   "version": "1.0.0",
-  "description": "joshdreier.com",
+  "description": "The Urban Builder",
   "repository": {
     "type": "git"
   },
@@ -10,17 +10,21 @@
     "node": "10.4.1"
   },
   "dependencies": {
-    "bower": "^1.8.8",
+    "customizr": "^2.0.2",
     "gulp": "^4.0.2",
-    "gulp-cli": "^2.2.0",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.0",
     "gulp-copy": "^4.0.1",
-    "gulp-eslint": "^2.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "^1.0.6",
-    "gulp-sourcemaps": "^2.1.1",
-    "gulp-uglify": "^1.5.3",
+    "gulp-eslint": "^6.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-modernizr": "^4.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
     "jquery": "^3.4.0",
     "merge-stream": "^1.0.1",
     "mkdirp": "^1.0.4",
@@ -29,10 +33,7 @@
     "pbcopy": "0.0.1"
   },
   "devDependencies": {
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-livereload": "^4.0.1",
-    "gulp-modernizr": "^2.0.4",
-    "gulp-sass-lint": "^1.2.0",
+    "sass": "^1.54.5",
     "support-for": "^1.0.6"
   },
   "scripts": {

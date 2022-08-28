@@ -3,50 +3,37 @@ var UB = {};
 $(function() {
 
 
-  // Hero Slideshow
   if ($('.homepage').length) {
-    var swiperHero = new Swiper('.homepage .swiper-container', {
-      autoplay: 4000,
-      speed: 1000,
-      //onlyExternal: true,
+    const swiperHome = new Swiper('.swiper-container-home', {
+      // Optional parameters
       loop: true,
-      spaceBetween: 0,
-      slidesPerView: 1,
-      slideToClickedSlide: true,
+
+      autoplay: {
+        delay: 5000,
+      },
+
       effect: 'fade',
-      fade: {
+      fadeEffect: {
         crossFade: true
       },
-      preloadImages: false
     });
-
   }
 
-
-  // projects swiper
 
   if ($('.projects').length) {
+    const swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      loop: true,
 
-    $('.swiper-container').each(function(){
-      new Swiper($(this), {
-        spaceBetween: 3,
-        slidesPerView: 1,
-        grabCursor: true,
-        loop: true,
-        speed: 1000,
-        pagination: $(this).find('.swiper-pagination'),
-        paginationClickable: $(this).find('.swiper-pagination'),
-        preventClicks: false,
-        onClick: function(swiper,event){swiper.slideNext();}
-      });
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
-
-    //autoplay first
-    //var mySwiper = $('.swiper-container')[0].swiper;
-    //mySwiper.params.autoplay = 5000;
-    //mySwiper.startAutoplay();
-
   }
+
+
+
 
 });
 

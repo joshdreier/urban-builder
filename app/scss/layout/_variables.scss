@@ -4,6 +4,8 @@ $gutter: 12px;
 $grid-columns: 12;
 $max-width: 1130px;
 
+
+
 // font stacks
 $gothamBook: "GothamBook", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $gothamLight: "GothamLight", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -15,10 +17,6 @@ $circularAirBold: "Circular-Air-Bold", "Helvetica", "Arial", sans-serif;
 $circularAirBook: "Circular-Air-Book", "Helvetica", "Arial", sans-serif;
 $circularAirLight: "Circular-Air-Light", "Helvetica", "Arial", sans-serif;
 
-// Breakpoints (including grid columns)
-$desktop-plus: new-breakpoint(min-width 1280px 12);
-$desktop: new-breakpoint(min-width 960px 12);
-$tablet: new-breakpoint(min-width 580px 12);
 
 
 // Colors
@@ -35,7 +33,7 @@ $heading-line-height: 1.2;
 // Other Sizes
 $color-heather-radius: 3px;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: .75em;
 $base-z-index: 0;
 
 // Animations

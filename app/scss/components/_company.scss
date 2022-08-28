@@ -6,9 +6,8 @@
     .main-image {
       margin-bottom: 0;
 
-      @include media($desktop) {
-        @include span-columns(6, block-collapse);
-        margin: rem(30) 0 0;
+      @include media(desktop) {
+        margin: 30px 0 0;
       }
 
     }
@@ -16,31 +15,26 @@
     .main-text {
       padding: 0;
       text-align: left;
-      margin-top: rem(20);
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding: 0 20px;
 
-      @include media($desktop) {
-        @include remove-layout;
-        @include span-columns(6, block-collapse);
-        @include omega;
-        margin-top: rem(26);
-        margin-bottom: rem(30);
+      @include media(desktop) {
+        margin-top: 26px;
       }
 
       p,
       a {
         text-align: left;
-        font-size: rem(14);
-        line-height: rem(22);
+        font-size: 14px;
+        line-height: 1.4;
 
-        @include media($tablet) {
-          font-size: rem(16);
-          line-height: rem(24);
+        @include media(tablet) {
+          font-size: 16px;
         }
 
-        @include media($desktop-plus) {
-          font-size: rem(20);
-          line-height: rem(30);
-          margin-bottom: rem(30);
+        @include media(desktop) {
+          font-size: 18px;
         }
 
       }
@@ -56,9 +50,9 @@
       h3 {
         text-transform: uppercase;
         color: #000;
-        font-size: rem(14);
+        font-size: 14px;
 
-        @include media($tablet) {
+        @include media(tablet) {
           padding: 0 10%;
         }
 
@@ -70,7 +64,12 @@
 
 }
 
-
+.company article {
+  @include media(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 
 .contact {
 
@@ -79,32 +78,31 @@
     .main-text {
       padding: 0;
       text-align: center;
-      margin-top: rem(40);
+      margin-top: 40px;
       margin-bottom: 40px;
 
-      @include media($desktop) {
-        @include fill-parent;
+      @include media(desktop) {
         max-width: 100%;
-        margin-top: rem(80);
-        margin-bottom: rem(100);
+        margin-top: 80px;
+        margin-bottom: 100px;
       }
 
 
       p,
       a {
         text-align: center;
-        font-size: rem(14);
-        line-height: rem(22);
+        font-size: 14px;
+        line-height: 22px;
 
-        @include media($tablet) {
-          font-size: rem(16);
-          line-height: rem(24);
+        @include media(tablet) {
+          font-size: 16px;
+          line-height: 24px;
         }
 
-        @include media($desktop) {
-          font-size: rem(20);
-          line-height: rem(30);
-          margin-bottom: rem(30);
+        @include media(desktop) {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 30px;
         }
 
       }
@@ -120,9 +118,9 @@
       h3 {
         text-transform: uppercase;
         color: #000;
-        font-size: rem(14);
+        font-size: 14px;
 
-        @include media($tablet) {
+        @include media(tablet) {
           padding: 0 10%;
         }
 

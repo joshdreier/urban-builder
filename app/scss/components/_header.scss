@@ -1,27 +1,30 @@
 header {
-  @include layout;
-  @include padding(rem(24) 0);
-  display: flex;
+  display: grid;
   position: relative;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 24px 0;
 
-  @include media($desktop) {
-    @include padding(rem(40) 0);
+  @include media(desktop) {
+    padding: 40px 0;
   }
 
   .logo-container {
-    @include span-columns(10);
-    padding: 0;
-    margin: 0 0 0 rem(-2);
+    padding: 0 25px;
+    margin: 0 0 0 -2px;
 
     a {
-      @include size(220px 21px);
-      @include hide-text;
+      width: 220px;
+      height: 21px;
+      font-size: 0;
       display: block;
       background: url('../images/logo.svg') no-repeat center center;
       background-size: 220px auto;
 
-      @include media($desktop) {
-        @include size(310px 32px);
+      @include media(desktop) {
+        width: 310px;
+        height: 32px;
         background-size: 310px auto;
       }
 

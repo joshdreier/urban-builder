@@ -2,13 +2,14 @@
 var gulp = require('gulp');
 var rename = require('gulp-rename');
 var eslint = require('gulp-eslint');
-var sass = require('gulp-sass');
+var sass = require('gulp-sass')(require('sass'));
 var sassGlob = require('gulp-sass-glob');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var livereload = require('gulp-livereload');
 var sassLint = require('gulp-sass-lint');
 var autoprefixer = require('gulp-autoprefixer');
+var modernizr = require('gulp-modernizr');
 
 var paths = {
   scripts: [
@@ -28,6 +29,25 @@ var paths = {
     'dist/js/**/*.min.js'
   ]
 };
+
+gulp.task('modernizr', function () {
+  'use strict';
+  return gulp.src('app/js/*.js')
+    .pipe(modernizr('modernizr.min.js', {
+      options: [
+        'setClasses',
+        'addTest',
+        'testProp'
+      ],
+      tests: [
+        'pointerevents',
+        'flexbox'
+      ],
+      crawl: false
+    }))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/vendor'));
+});
 
 gulp.task('clean', function () {
   'use strict';
@@ -110,6 +130,10 @@ gulp.task('sourcemaps', function () {
     .pipe(gulp.dest(paths.css.root));
 });
 
+gulp.task('extras', function () {
+  return gulp.src('app/*.xml')
+    .pipe(gulp.dest('dist'));
+});
 
 gulp.task('html', function () {
   return gulp.src('app/*.html')
@@ -126,13 +150,13 @@ gulp.task('images', () => {
     .pipe(gulp.dest('dist/images'));
 });
 
-gulp.task('build', gulp.series(['sass', 'compress', 'html', 'fonts', 'images']));
+gulp.task('build', gulp.series(['sass', 'compress', 'modernizr', 'extras', 'html', 'fonts', 'images']));
 
 gulp.task('watch', gulp.series(['build'], function () {
   'use strict';
   livereload.listen();
-  gulp.watch(paths.sass.watch, ['sass']);
-  gulp.watch(paths.scripts, ['compress']);
+  gulp.watch(paths.sass.watch, gulp.series(['sass']));
+  gulp.watch(paths.scripts, gulp.series(['compress']));
 }));
 
 
