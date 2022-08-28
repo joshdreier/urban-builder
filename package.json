@@ -24,7 +24,9 @@
     "jquery": "^3.4.0",
     "merge-stream": "^1.0.1",
     "natives": "^1.1.6",
-    "pbcopy": "0.0.1"
+    "pbcopy": "0.0.1",
+    "sass": "^1.54.5",
+    "sass-loader": "^13.0.2"
   },
   "devDependencies": {
     "gulp-autoprefixer": "^3.1.1",
