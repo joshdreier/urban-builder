@@ -5,9 +5,12 @@
 
     .main-image {
       margin-bottom: 0;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
 
       @include media(desktop) {
-        margin: 30px 0 0;
+        margin: 30px 0;
       }
 
     }
@@ -67,7 +70,7 @@
 .company article {
   @include media(desktop) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 }
 
